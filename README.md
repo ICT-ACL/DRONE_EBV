@@ -35,7 +35,7 @@ Further, if you want DRONE supports fault tolerance, you should add parameter ``
 For running DRONE, you should also build the DRONE_start.c file at first:
 
 ```shell
-cd DRONE
+cd DRONE/sbin
 mpic++ DRONE_start.cpp -o DRONE_start -lgflags
 ```
 
