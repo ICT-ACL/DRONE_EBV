@@ -10,7 +10,7 @@ DEFINE_string(filename, "", "name of the input file to store directed edge list 
 
 DEFINE_bool(is_dump, false, "whether dump results");
 DEFINE_string(output, "results", "name of the file to store directed edge list of a graph.");
-DEFINE_uint64(vertexs, 0, "num of vertices");
+DEFINE_uint64(vertices, 0, "num of vertices");
 DEFINE_uint64(edges, 0, "num of edges/lines");
 
 
@@ -121,7 +121,7 @@ int main(int argc, char** argv) {
 //	std::cout << "is_dump:" << FLAGS_is_dump << std::endl;
 //	if (FLAGS_is_dump) std::cout << "output:" << FLAGS_output << std::endl;
 //
-//	std::cout << "vertexs:" << FLAGS_vertexs << std::endl;
+//	std::cout << "vertices:" << FLAGS_vertices << std::endl;
 //	std::cout << "edges:" << FLAGS_edges << std::endl;
 //	std::cout << "two_replica:" << FLAGS_two_replica << std::endl;
 //	if (FLAGS_two_replica) std::cout << "fault_weight:" << FLAGS_fault_weight << std::endl;
@@ -172,7 +172,7 @@ int main(int argc, char** argv) {
 
     alpha = 1.0;
     double beta = 1.0;
-    maxn = FLAGS_vertexs;
+    maxn = FLAGS_vertices;
     maxm = FLAGS_edges;
     if (maxn == 0 || maxm == 0) {
         printf("You must specify the number of vertices and edges!");

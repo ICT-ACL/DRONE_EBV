@@ -320,10 +320,6 @@ func (w *SSSPWorker) incEval(args *pb.EmptyRequest, id int) {
 }
 
 func (w *SSSPWorker) IncEval(ctx context.Context, args *pb.EmptyRequest) (*pb.IncEvalResponse, error) {
-	if w.selfId == 3 {
-		w.stopChannel <- false
-	}
-
 	go w.incEval(args, w.selfId)
 	return &pb.IncEvalResponse{Update: true}, nil
 }
